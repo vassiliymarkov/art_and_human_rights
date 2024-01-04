@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Исключаем запросы на 404.php из правила
+    RewriteCond %{REQUEST_URI} !^/404\.php$
+    
+    # Проверка наличия файла или директории
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Переадресация на страницу 404
+    RewriteRule ^(.*)$ /404.php [L]
+</IfModule>

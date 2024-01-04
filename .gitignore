@@ -1,0 +1,10 @@
+config.php
+csp.php
+
+mail.php
+
+*.log
+
+*.json
+
+meilisearch-linux-amd64
